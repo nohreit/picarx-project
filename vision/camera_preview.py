@@ -24,7 +24,7 @@ def main():
     except KeyboardInterrupt:
         print("Stopping...")
     finally:
-        Vilib.camera_stop()
+        Vilib.camera_close()
         px.close()
 
 
