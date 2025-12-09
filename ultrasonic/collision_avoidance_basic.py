@@ -4,17 +4,19 @@ from picarx import Picarx
 
 px = Picarx()
 
-SAFE_DIST = 40.0   # cm
-DANGER_DIST = 20.0 # cm
+SAFE_DIST = 40.0  # cm
+DANGER_DIST = 20.0  # cm
 
 FORWARD_SPEED = 10  # small, safe values; adjust later
-SLOW_SPEED    = 5
+SLOW_SPEED = 5
+
 
 def get_distance_cm():
     d = px.get_distance()
     if d is None or d <= 0:
         return 999.0
     return float(d)
+
 
 def main():
     print("Starting basic collision avoidance. Ctrl+C to stop.")
@@ -43,6 +45,7 @@ def main():
         print("\nStopping.")
     finally:
         px.stop()
+
 
 if __name__ == "__main__":
     main()

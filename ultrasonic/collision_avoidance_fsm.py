@@ -6,23 +6,27 @@ from picarx import Picarx
 
 px = Picarx()
 
+
 class Zone(Enum):
     SAFE = 0
     CAUTION = 1
     DANGER = 2
 
-SAFE_DIST    = 50.0  # cm
+
+SAFE_DIST = 50.0  # cm
 CAUTION_DIST = 30.0  # cm
 
 FAST_SPEED = 15
 SLOW_SPEED = 8
 TURN_SPEED = 10
 
+
 def get_distance_cm():
     d = px.get_distance()
     if d is None or d <= 0:
         return 999.0
     return float(d)
+
 
 def classify_zone(dist: float) -> Zone:
     if dist < CAUTION_DIST:
@@ -31,6 +35,7 @@ def classify_zone(dist: float) -> Zone:
         return Zone.CAUTION
     else:
         return Zone.SAFE
+
 
 def main():
     print("Starting FSM-based collision avoidance. Ctrl+C to stop.")
@@ -77,6 +82,7 @@ def main():
     finally:
         px.stop()
         px.set_dir_servo_angle(0)
+
 
 if __name__ == "__main__":
     main()
