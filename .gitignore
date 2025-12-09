@@ -1,0 +1,130 @@
+# ==========================================
+# OS files
+# ==========================================
+.DS_Store
+Thumbs.db
+
+# ==========================================
+# Python virtual environments
+# ==========================================
+.venv/
+venv/
+env/
+ENV/
+
+# ==========================================
+# Python cache & bytecode
+# ==========================================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pycache
+
+# ==========================================
+# Camera / vision temp outputs
+# ==========================================
+# SunFounder Vilib camera frames or snapshots
+*.jpg
+*.jpeg
+*.png
+
+# mjpg-streamer temporary files
+www/*.mjpg
+stream/*.mjpg
+
+# PiCamera2 temporary buffer dumps
+*.h264
+*.raw
+
+# YOLO / model inference temp images
+runs/
+exp/
+exp*/  # YOLO output folders
+
+# ==========================================
+# Model weights (keep your repo small)
+# ==========================================
+*.pt
+*.tflite
+*.onnx
+*.engine
+*.weights
+
+# ==========================================
+# Logs (Pi, Flask, Uvicorn, camera, etc.)
+# ==========================================
+*.log
+logs/
+log/
+debug.log
+camera.log
+uvicorn.log
+gunicorn.log
+
+# ==========================================
+# Dependencies
+# ==========================================
+node_modules/
+vendor/
+
+# pip install leftovers
+*.egg-info/
+*.egg
+*.whl
+build/
+dist/
+
+# ==========================================
+# Temporary / local config files
+# ==========================================
+.env
+.env.*
+!.env.example
+
+# ==========================================
+# Editor / IDE files
+# ==========================================
+.vscode/
+.idea/
+*.iml
+
+# ==========================================
+# Frontend caches (if you add a UI)
+# ==========================================
+.cache/
+.next/
+.nuxt/
+.svelte-kit/
+.parcel-cache/
+eslintcache
+
+# ==========================================
+# Additional robotics-related ignores
+# ==========================================
+
+# ROS2 logs (if ever installed)
+~/.ros/log/
+
+# Motor/servo calibration dumps
+calibration/
+*.cal
+
+# PiCar-X internal installation directories
+# (avoid committing cloned sunfounder libraries)
+picar-x/
+vilib/
+
+# If you clone them inside your project
+*/picar-x/
+*/vilib/
+
+# ==========================================
+# Miscellaneous
+# ==========================================
+*.bak
+*.old
+*.orig
+tmp/
+temp/
+*.tmp
